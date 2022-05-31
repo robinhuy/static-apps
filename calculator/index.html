@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="fb:app_id" content="1060439867385425">
+    <meta property="og:site_name" content="robinhuy.github.io">
+    <meta property="og:title" content="Calculator">
+    <meta property="og:description" content="HTML, CSS, Javascript applications">
+    <meta property="og:image" content="https://robinhuy.github.io/calculator/img/thumbnail.jpg">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://robinhuy.github.io/calculator/">
+    <meta property="og:type" content="article">
+    <title>Calculator</title>
+    <link rel="canonical" href="https://robinhuy.github.io/calculator/">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-86889005-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+<body>
+
+<div id="calculator">
+    <div id="calculator-display">{{ displayValueFormatted }}</div>
+
+    <div id="calculator-keypad">
+        <div class="input-keys">
+            <div class="function-keys">
+                <button v-if="!canClear" class="key-clear" @click="clearAll">AC</button>
+                <button v-else class="key-clear" @click="clear">C</button>
+                <button class="key-sign" @click="changeSign">+/<sub>−</sub></button>
+                <button class="key-percent" @click="calculatePercent">%</button>
+            </div>
+
+            <div class="digit-keys">
+                <button class="key-0" @click="inputDigit('0')">0</button>
+                <button @click="inputDigit('.')" class="key-dot">•</button>
+                <button @click="inputDigit('1')">1</button>
+                <button @click="inputDigit('2')">2</button>
+                <button @click="inputDigit('3')">3</button>
+                <button @click="inputDigit('4')">4</button>
+                <button @click="inputDigit('5')">5</button>
+                <button @click="inputDigit('6')">6</button>
+                <button @click="inputDigit('7')">7</button>
+                <button @click="inputDigit('8')">8</button>
+                <button @click="inputDigit('9')">9</button>
+            </div>
+        </div>
+
+        <div class="operator-keys">
+            <button :class="{active: this.currentOperator === '/'}" @click="inputOperator('/')">
+                <span>÷</span>
+            </button>
+            <button :class="{active: this.currentOperator === '*'}" @click="inputOperator('*')">
+                <span>×</span>
+            </button>
+            <button :class="{active: this.currentOperator === '-'}" @click="inputOperator('-')">
+                <span>−</span>
+            </button>
+            <button :class="{active: this.currentOperator === '+'}" @click="inputOperator('+')">
+                <span>+</span>
+            </button>
+            <button @click="inputOperator('=')"><span>=</span></button>
+        </div>
+    </div>
+</div>
+
+<script src="js/vuejs-2.1.0.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="fb:app_id" content="1060439867385425">
+    <meta property="og:site_name" content="robinhuy.github.io">
+    <meta property="og:title" content="Kanban Board">
+    <meta property="og:description" content="Simple Kanban Board application">
+    <meta property="og:image" content="https://robinhuy.github.io/kanban-board/img/thumbnail.jpg">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://robinhuy.github.io/kanban-board/">
+    <meta property="og:type" content="product">
+    <title>Kanban Board</title>
+    <link rel="canonical" href="https://robinhuy.github.io/kanban-board/">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="plugins/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.min.css" media="screen,projection"/>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-86889005-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+<nav>
+    <div class="nav-wrapper blue lighten-1">
+        <a href="#" class="brand-logo center">Kanban Board</a>
+    </div>
+</nav>
+
+<section class="container" id="main-content">
+    <div class="overlay">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+                <h5 class="red lighten-1 white-text">Todo <span class="count">(0)</span></h5>
+
+                <div class="collection sorted-list" id="todo"></div>
+
+                <div class="action row">
+                    <div class="input-field col s12">
+                        <input id="new_job_todo" type="text" onkeydown="app.newJob(event, 'todo', this)">
+                        <label for="new_job_todo">New job</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="card">
+                <h5 class="orange lighten-1 white-text">Doing <span class="count">(0)</span></h5>
+
+                <div class="collection sorted-list" id="doing"></div>
+
+                <div class="action row">
+                    <div class="input-field col s12">
+                        <input id="new_job_doing" type="text" onkeydown="app.newJob(event, 'doing', this)">
+                        <label for="new_job_doing">New job</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4">
+            <div class="card">
+                <h5 class="green lighten-1 white-text">Done <span class="count">(0)</span></h5>
+
+                <div class="collection sorted-list" id="done"></div>
+
+                <div class="action row">
+                    <div class="input-field col s12">
+                        <input id="new_job_done" type="text" onkeydown="return app.newJob(event, 'done', this)">
+                        <label for="new_job_done">New job</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="modal-confirm" class="modal">
+    <div class="modal-content">
+        <h4>Confirm Delete</h4>
+        <p>Are you sure to delete this job?</p>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action waves-effect waves-light btn" id="btn-delete"> Agree </a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancel</a>
+    </div>
+</div>
+
+<div id="modal-alert" class="modal">
+    <div class="modal-content">
+        <h4>Warning</h4>
+        <p>Doing job cannot greater than 3</p>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green waves-light btn" style="margin: 0 15px 15px 0;">OK</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/jqueryui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slide Show</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" />
+    <link rel="stylesheet" href="themes/light/light.css" type="text/css" />
+    <link rel="stylesheet" href="themes/dark/dark.css" type="text/css" />
+    <link rel="stylesheet" href="themes/bar/bar.css" type="text/css" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Start Button -->
+    <button onclick="start(this)">Start Slide Show</button>
+
+    <!-- Background Music -->
+    <audio id="bg-music">
+      <source src="bg-music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Slide Show -->
+    <div id="wrapper" style="display: none;">
+      <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider">
+          <img src="img/img1.jpg" alt="" title="#htmlcaption" />
+          <img src="img/img3.jpg" alt="" />
+          <img src="img/img2.jpg" alt="" title="#htmlcaption" />
+          <img src="img/img3.jpg" alt="" />
+        </div>
+
+        <div id="htmlcaption" class="nivo-html-caption">
+          CAPTION HERE
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+      function start(btn) {
+        // Play background music
+        document.getElementById("bg-music").play();
+
+        // Remove start button
+        $(btn).remove();
+
+        // Init slider
+        $("#wrapper").css("display", "block");
+        $("#slider").nivoSlider({
+          effect: "random",
+          slices: 15,
+          animSpeed: 500,
+          pauseTime: 4000,
+          startSlide: 0,
+          directionNav: false,
+          controlNav: false,
+          controlNavThumbs: false,
+          pauseOnHover: false,
+          manualAdvance: false,
+          randomStart: true
+        });
+      }
+    </script>
+  </body>
+</html>

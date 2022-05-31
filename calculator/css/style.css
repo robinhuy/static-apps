@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #dddddd;
+}
+
+#calculator {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 320px;
+	color: #ffffff;
+}
+
+#calculator-display {
+	background-color: #2a2a2a;
+	line-height: 1.3em;
+	font-size: 2.8em;
+	text-align: right;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding-right: 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#calculator-keypad,
+.function-keys,
+.digit-keys {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#calculator-keypad {
+	height: 250px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom: 1px solid #262626;
+	overflow: hidden;
+}
+
+#calculator-keypad button {
+	padding: 0;
+	font-size: 1.5em;
+	width: 80px;
+	height: 50px;
+	line-height: 50px;
+	color: #ffffff;
+	background: none;
+	border: none;
+	font-family: inherit;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#calculator-keypad .input-keys {
+	width: 240px;
+	background-color: #717171;
+}
+
+#calculator-keypad .input-keys button {
+	border-top: 1px solid #262626;
+	border-left: 1px solid #262626;
+}
+
+#calculator-keypad .input-keys button:active {
+	background-color: #838383;
+}
+
+#calculator-keypad .digit-keys {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap-reverse;
+	flex-wrap: wrap-reverse;
+}
+
+#calculator-keypad .digit-keys .key-0 {
+	width: 160px;
+	border-bottom-left-radius: 5px;
+}
+
+#calculator-keypad .digit-keys .key-dot {
+	padding-top: 8px;
+}
+
+#calculator-keypad .operator-keys {
+	background-color: #fe9807;
+}
+
+#calculator-keypad .operator-keys button {
+	border: 1px solid #262626;
+}
+
+#calculator-keypad .operator-keys button:not(:last-child) {
+	border: 1px solid #262626;
+	border-bottom: 0;
+}
+
+#calculator-keypad .operator-keys button span {
+	display: block;
+	height: 50px;
+	line-height: 48px;
+}
+
+#calculator-keypad .operator-keys button.active > span {
+	border: 1px solid #000000;
+	border-bottom: 2px solid #000000;
+}
+
+#calculator-keypad .operator-keys button:active {
+	background-color: #fecb3a;
+}
+
+#calculator-keypad .operator-keys .key-equal {
+	border-bottom-right-radius: 5px;
+}

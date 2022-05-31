@@ -1,0 +1,96 @@
+h5 {
+    margin: 0;
+    padding: 0.82rem 20px 0.656rem 20px;
+}
+
+h5 .count {
+    font-size: 1.4rem;
+}
+
+#main-content {
+    margin-top: 3rem;
+    position: relative;
+}
+
+.card .collection {
+    margin: 0;
+    overflow: inherit;
+    min-height: calc(1.5rem + 20px);
+    background-color: #fafafa;
+}
+
+.card .collection .collection-item {
+    transition: 0s;
+    cursor: move;
+}
+
+.card .collection .collection-item.dragging {
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+}
+
+.collection-item:hover .badge .material-icons {
+    display: block;
+}
+
+.ui-state-highlight {
+    background-color: #fafafa;
+    height: calc(1.5rem + 20px);
+}
+
+.collection-item .badge {
+    margin-right: -10px;
+    padding-right: 0;
+}
+
+.collection-item .badge .material-icons {
+    display: none;
+    cursor: pointer;
+    line-height: 1.5rem;
+}
+
+.collection-item .badge:hover .material-icons {
+    background-color: #e0e0e0;
+}
+
+.action {
+    padding: 10px 20px;
+}
+
+.modal {
+    width: 40%;
+}
+
+.modal .modal-content h4 {
+    font-size: 1.64rem;
+    line-height: 110%;
+}
+
+#btn-delete {
+    margin-right: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1010;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.overlay > .preloader-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    color: #000;
+    font-size: 30px;
+}
+
+.hidden {
+    display: none;
+}

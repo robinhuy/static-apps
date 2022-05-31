@@ -1,0 +1,103 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: arial, sans-serif;
+	color: #878787;
+}
+
+select {
+	padding: 5px 10px;
+	width: 150px;
+	height: 25px;
+	font-size: 13px;
+	color: #555;
+	border: 1px solid #ccc;
+}
+
+#weather {
+	margin: auto;
+	max-width: 632px;
+}
+
+#setting {
+	margin: 20px 0;
+}
+
+#display {
+	padding: 20px 16px 24px 16px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+#top {
+	margin-bottom: 20px;
+}
+
+#top .location {
+	font-size: 24px;
+	line-height: 1.2;
+}
+
+#top .time {
+	font-size: 16px;
+	line-height: 2;
+}
+
+#top .status {
+	font-size: 13px;
+	line-height: 1.4
+}
+
+#left-information {
+	color: #212121;
+}
+
+#left-information .thumbnail {
+	float: left;
+	height: 64px;
+	width: 64px;
+}
+
+#left-information .temperature {
+	float: left;
+	margin-top: -3px;
+	padding-left: 10px;
+	font-size: 64px;
+}
+
+#left-information .unit {
+	float: left;
+	margin-top: 6px;
+	font-size: 20px;
+}
+
+#right-information {
+	float: right;
+	padding-left: 5px;
+	line-height: 22px;
+	padding-top: 2px;
+	min-width: 43%;
+	font-weight: lighter;
+}
+
+#forecast {
+	padding-top: 10px;
+	clear: both;
+}
+
+#forecast ul {
+	padding: 0;
+	margin: 15px 0 5px 0;
+}
+
+#forecast ul li {
+	display: inline-block;
+	height: 90px;
+	width: 73px;
+	text-align: center;
+	line-height: 1;
+}

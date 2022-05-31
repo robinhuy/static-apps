@@ -1,0 +1,29 @@
+html,body{margin:0;padding:0;}
+*{box-sizing: border-box;}
+a{text-decoration:none;}
+img{max-width:100%;}
+
+.clear {
+	clear: both;
+}
+
+body {
+	font-family: "Open Sans", arial, sans-serif;
+	font-weight: 300;	
+	background-color: #FFFFFF;
+}
+
+.container {
+	float: left;
+}
+
+.thumb {
+    float: left;
+    text-align: center;
+    border: 1px solid #dddddd;
+    padding: 5px;
+    width: 33.333333%;
+}
+
+
+

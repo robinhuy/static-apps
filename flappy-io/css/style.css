@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+canvas {
+    border: 5px solid #d3d3d3;
+    background-color: #ffffff;
+}

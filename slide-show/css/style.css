@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+  overflow: hidden;
+}
+button {
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #7952b3;
+  border-color: #7952b3;
+  border-radius: 0.3rem;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+button:hover {
+  color: #fff;
+  background-color: #7952b3;
+  border-color: #7952b3;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+#slider {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+.nivo-caption {
+  background-color: #6c5ce7;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 15px 10px;
+  text-align: center;
+}
