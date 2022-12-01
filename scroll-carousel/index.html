@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="JavaScript, Carousel, Scroll Carousel" />
+    <meta
+      name="description"
+      content="Demo Scroll Carousel - The simple, lightweight carousel that requires no dependencies and supports scroll on touchpad."
+    />
+
+    <title>Scroll Carousel Example</title>
+
+    <meta property="og:title" content="Scroll Carousel Example" />
+    <meta
+      property="og:description"
+      content="Demo Scroll Carousel - The simple, lightweight carousel that requires no dependencies and supports scroll on touchpad."
+    />
+    <meta
+      property="og:image"
+      content="https://repository-images.githubusercontent.com/544682207/ff540f98-09a5-4fc9-b2a4-1e3cfa8dce3b"
+    />
+
+    <meta name="twitter:title" content="Scroll Carousel Example" />
+    <meta
+      name="twitter:description"
+      content="Demo Scroll Carousel - The simple, lightweight carousel that requires no dependencies and supports scroll on touchpad."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://repository-images.githubusercontent.com/544682207/ff540f98-09a5-4fc9-b2a4-1e3cfa8dce3b"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-center">Scroll Carousel Example</h1>
+
+      <ul id="carousel">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/gh/robinhuy/scroll-carousel@v1.0.0/dist/scroll-carousel.min.js"></script> -->
+    <script src="scroll-carousel.min.js"></script>
+    <script>
+      function initCarousel() {
+        ScrollCarousel({
+          carouselSelector: "#carousel",
+          gap: 10,
+          responsive: [
+            {
+              breakPoint: 768,
+              slidesToShow: 3,
+              gap: 20,
+            },
+            {
+              breakPoint: 1200,
+              slidesToShow: 4,
+              gap: 30,
+            },
+          ],
+        });
+      }
+
+      initCarousel();
+    </script>
+  </body>
+</html>
