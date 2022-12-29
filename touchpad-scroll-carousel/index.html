@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="JavaScript, Carousel, Scroll Carousel" />
+    <meta name="keywords" content="JavaScript, Carousel, Touchpad Scroll Carousel" />
     <meta
       name="description"
-      content="Demo Scroll Carousel - The simple, lightweight carousel that requires no dependencies and supports scroll on touchpad."
+      content="Demo Touchpad Scroll Carousel - The simple, lightweight responsive carousel that requires no dependencies and supports scroll on touchpad."
     />
 
     <title>Scroll Carousel Example</title>
@@ -45,7 +45,7 @@
 
   <body>
     <div class="container">
-      <h1 class="text-center">Scroll Carousel Example</h1>
+      <h1 class="text-center">Touchpad Scroll Carousel Example</h1>
 
       <ul id="carousel">
         <li>1</li>
@@ -61,11 +61,10 @@
       </ul>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/gh/robinhuy/scroll-carousel@v1.0.0/dist/scroll-carousel.min.js"></script> -->
-    <script src="scroll-carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/robinhuy/touchpad-scroll-carousel/dist/touchpad-scroll-carousel.min.js"></script>
     <script>
       function initCarousel() {
-        ScrollCarousel({
+        TouchpadScrollCarousel({
           carouselSelector: "#carousel",
           gap: 10,
           responsive: [
