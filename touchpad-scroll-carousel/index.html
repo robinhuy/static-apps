@@ -63,26 +63,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/touchpad-scroll-carousel/dist/touchpad-scroll-carousel.min.js"></script>
     <script>
-      function initCarousel() {
-        TouchpadScrollCarousel({
-          carouselSelector: "#carousel",
-          gap: 10,
-          responsive: [
-            {
-              breakPoint: 768,
-              slidesToShow: 3,
-              gap: 20,
-            },
-            {
-              breakPoint: 1200,
-              slidesToShow: 4,
-              gap: 30,
-            },
-          ],
-        });
-      }
-
-      initCarousel();
+      TouchpadScrollCarousel({
+        carouselSelector: "#carousel",
+        gap: 10,
+        responsive: [
+          {
+            breakpoint: 768,
+            slidesToShow: 2,
+            gap: 20,
+          },
+          {
+            breakpoint: 1200,
+            slidesToShow: 3,
+            gap: 30,
+          },
+        ],
+      });
     </script>
   </body>
 </html>
